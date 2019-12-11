@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, ElementRef, HostBinding, Input, ViewEncapsulation} from '@angular/core';
-import {dinosaurIcons} from './icons';
+import {dinosaurIcons} from './dinosaur-icons';
 
 @Component({
   selector: 'dinosaur-icons',
@@ -8,7 +8,7 @@ import {dinosaurIcons} from './icons';
   `,
   styles: ['.dinosaurIcon svg{width: 50px; height: 50px}'],
   encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DinosaurIconsComponent {
 
@@ -16,7 +16,7 @@ export class DinosaurIconsComponent {
 
   @Input()
   set name(iconName: string) {
-    this.element.nativeElement.innerHTML = dinosaurIcons[iconName];
+    this.element.nativeElement.innerHTML = dinosaurIcons[iconName] || null;
   }
 
   constructor(private element: ElementRef) {
