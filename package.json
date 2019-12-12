@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:showcase": "ng build dinosaur-icons-showcase --prod",
+    "analyze": "ng build dinosaur-icons-showcase --prod --stats-json && webpack-bundle-analyzer ./dist/dinosaur-icons-showcase/stats-es2015.json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
