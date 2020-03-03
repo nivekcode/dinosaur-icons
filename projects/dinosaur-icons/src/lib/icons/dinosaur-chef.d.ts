@@ -1,4 +1,2 @@
-export declare const dinosaurIconsChef: {
-    name: string;
-    data: string;
-};
+import { DinosaurIcon } from './dinosaur-icons';
+export declare const dinosaurIconsChef: DinosaurIcon;

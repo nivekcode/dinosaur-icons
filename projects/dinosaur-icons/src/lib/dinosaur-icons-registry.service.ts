@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {DinosaurIcon} from './dinosaur-icons';
+import {DinosaurIcon} from './icons/dinosaur-icons';
 
 @Injectable({
     providedIn: 'root'

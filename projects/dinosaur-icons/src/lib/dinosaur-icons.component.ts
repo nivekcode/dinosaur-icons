@@ -1,6 +1,7 @@
-import {ChangeDetectionStrategy, Component, ElementRef, HostBinding, Inject, Input, Optional, ViewEncapsulation} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ElementRef, Inject, Input, Optional} from '@angular/core';
 import {DinosaurIconsRegistry} from './dinosaur-icons-registry.service';
 import {DOCUMENT} from '@angular/common';
+import {dinosaurIcon} from './icons/dinosaur-icons';
 
 @Component({
     selector: 'dinosaur-icons',
@@ -14,7 +15,7 @@ export class DinosaurIconsComponent {
     private svgIcon: SVGElement;
 
     @Input()
-    set name(iconName: string) {
+    set name(iconName: dinosaurIcon) {
         if (this.svgIcon) {
             this.element.nativeElement.removeChild(this.svgIcon);
         }

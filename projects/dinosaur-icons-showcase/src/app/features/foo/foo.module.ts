@@ -21,10 +21,9 @@ export class FooModule {
 
     constructor(private dinosaurIconRegistry: DinosaurIconsRegistry) {
         this.dinosaurIconRegistry.registerIcons([
-            dinosaurIconsBirthday as any,
-            dinosaurIconsChef as any,
-            dinosaurIconsSleep as any,
-            dinosaurIconsSpace as any
+            dinosaurIconsBirthday,
+            dinosaurIconsSleep,
+            dinosaurIconsSpace
         ]);
     }
 

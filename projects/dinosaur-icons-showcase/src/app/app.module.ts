@@ -22,7 +22,7 @@ export class AppModule {
 
     constructor(private dinosaurIconRegistry: DinosaurIconsRegistry) {
         this.dinosaurIconRegistry.registerIcons([
-            dinosaurIconsArtist as any
+            dinosaurIconsArtist
         ]);
     }
 }
