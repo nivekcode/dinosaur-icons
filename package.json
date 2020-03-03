@@ -1,10 +1,10 @@
 {
-  "name": "dinosaur-icons",
+  "name": "dinosaur-icons-root",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build:lib": "ng build --prod",
     "build:showcase": "ng build dinosaur-icons-showcase --prod",
     "generate-icons": "svg-to-ts -s projects/dinosaur-icons/icons -o projects/dinosaur-icons/src/lib -f dinosaur-icons -p dinosaurIcons -t dinosaurIcon -i DinosaurIcon",
     "test": "ng test",
@@ -22,6 +22,7 @@
     "@angular/platform-browser": "~9.0.4",
     "@angular/platform-browser-dynamic": "~9.0.4",
     "@angular/router": "~9.0.4",
+    "dinosaur-icons": "file:dinosaur-icons-0.0.1.tgz",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

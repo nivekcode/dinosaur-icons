@@ -3,9 +3,8 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app.routing.module';
 
 import {AppComponent} from './app.component';
-import {DinosaurIconsModule} from '../../../dinosaur-icons/src/lib/dinosaur-icons.module';
-import {DinosaurIconsRegistry} from '../../../dinosaur-icons/src/lib/dinosaur-icons-registry.service';
-import {dinosaurIconsArtist} from '../../../dinosaur-icons/src/lib/dinosaur-artist';
+import {DinosaurIconsModule, DinosaurIconsRegistry} from 'dinosaur-icons';
+import {dinosaurIconsArtist} from 'dinosaur-icons/icons';
 
 @NgModule({
     declarations: [
@@ -23,7 +22,7 @@ export class AppModule {
 
     constructor(private dinosaurIconRegistry: DinosaurIconsRegistry) {
         this.dinosaurIconRegistry.registerIcons([
-            dinosaurIconsArtist
+            dinosaurIconsArtist as any
         ]);
     }
 }
